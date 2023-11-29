@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.LoginComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 5rem;
+}
+
+.LoginComponent-in {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: .1px solid gray;
+    height: fit-content;
+    width: 30%;
+}
+
+.LoginComponent h1 {
+    color: #000;
+    padding-bottom: 40px;
+}
+
+.LoginComponent form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.LoginComponent input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.LoginComponent button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.LoginComponent button:hover {
+    background-color: #333;
+}
+
+.LoginComponent .error {
+    color: red;
+}
