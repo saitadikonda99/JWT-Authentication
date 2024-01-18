@@ -1,0 +1,46 @@
+.HomeComponent {
+    width: 100%;
+}
+
+.HomeComponent-in {
+    width: 100%;
+}
+
+.Home-Nav {
+    width: 100%;
+    padding: 1rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Home-Nav-one {
+    width: 40%;
+    color: white;
+    text-align: left;
+}
+
+.Home-Nav-two {
+    width: 60%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Home-Nav-two a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.Home-Nav-two button {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    margin: 0 1rem;
+}

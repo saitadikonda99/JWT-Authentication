@@ -13,8 +13,8 @@ const handleLogout = async (req, res) => {
 // Clear the refresh token in the database (Assuming you have a field named 'refreshToken' in your users table)
         await pool.query(`
             UPDATE users
-            SET refreshToken = null
-            WHERE refreshToken = ?`,
+            SET refresh_token = null
+            WHERE refresh_token = ?`,
             [refreshToken]
         );
 

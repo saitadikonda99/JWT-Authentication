@@ -3,8 +3,8 @@ import { useState,  } from 'react'
 import { useLocation, Navigate, Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import useAuth from '../hooks/useAuth';
-import './css/Login.css'
+import useAuth from '../../hooks/useAuth';
+import './Login.css'
 
 function LoginPage() {
 
@@ -17,7 +17,6 @@ function LoginPage() {
         username: '',
         password: '',
       });
-    
     const [error, setError] = useState(null);
     
     // Handle input changes
@@ -51,19 +50,15 @@ function LoginPage() {
             const password = response?.data?.password;
            
             setAuth({ user, role, password, accessToken, refreshToken });
-            sessionStorage.setItem('role', role);
-           
-            console.log(response.data);
-            if (response.status === 200) {
-                navigate(from, { replace: true });
-            }
+              
+            
+            navigate(from, { replace: true });
+
         } catch (error) { 
-            console.log(error);
             setError(error.message);
         }
     };
 
- 
 
   return (
      <div className="LoginComponent">

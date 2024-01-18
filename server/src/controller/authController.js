@@ -47,13 +47,13 @@ const handleLogin = async (req, res) => {
             const refreshToken = jwt.sign(
                 { username: authenticatedUser.username, id: authenticatedUser.id },
                 process.env.REFRESH_TOKEN_SECRET,
-                { expiresIn: '1d', algorithm: 'HS256' }
+                { expiresIn: '15m', algorithm: 'HS256' }
             );
 
             // save the refresh token with current user in the database
             await pool.query(`
                 UPDATE users
-                SET refreshToken = ?
+                SET refresh_token = ?
                 WHERE id = ?`
                  ,[ refreshToken, authenticatedUser.id ]
             );

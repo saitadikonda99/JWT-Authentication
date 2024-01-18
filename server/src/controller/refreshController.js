@@ -23,7 +23,8 @@ const refreshTokenHandler = async (refreshToken, res) => {
             return res.json({
                 username: userData[0].username, 
                 role: [userData[0].role], 
-                id: userData[0].id, accessToken 
+                id: userData[0].id, 
+                accessToken 
             });
         }
 
